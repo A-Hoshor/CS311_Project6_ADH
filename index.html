@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/properties.js"></script>
+    <title>Application</title>
+</head>
+<body>
+    <header class = "topHeader">
+        <div class="headWrapper">
+            <h1>
+                Bellarmine Finanacials - Balance Sheet Calculator
+            </h1>
+        </div>
+    </header>
+
+    <div class="gridContainer">
+            <div id="aHeader">               
+                 <h2>Assets</h2>
+                </div>
+            <div id="lHeader">
+                <h2>Liabilities</h2>
+            </div>
+
+            <div id = "aTitle1">
+                <h3>Current Assets</h3>
+            </div>
+            <div id = "aTitle2">
+                <h3>Investment Property & Equipment</h3>
+            </div>
+            <div id = "aTitle3">
+                <h3>Intangibles</h3>
+            </div>
+
+            <div id="cAssets">
+                <button id="button" type="button" onclick="showCurrentAssets()">Add Current Assets</button>
+               
+            </div>
+            <div id = "cAssetsAdd" div class="cAssetsAdd">
+                    <label for="cashI">Cash:</label>
+                    <input type="number" id="cashI" value="0"><br>
+                    <label for="Inventory">Inventory:</label>
+                    <input type="invI" id="invI" value="0"><br>
+                    <label for="suppI">Supplies:</label>
+                    <input type="number" id="suppI" value="0"><br>
+                    <label for="tempI">Temporary Investments:</label>
+                    <input type="number" id="tempI" value="0"><br>
+                <p>Total Current Assets: &#x24;<span id="tcAssets"></span></p>
+            </div>
+            <div id="iProp">
+                <button id="button" type="button" onclick="showInvProp()">Add Investment Property & Equipment</button>
+            </div>
+            <div id = "iPropAdd" div class="iPropAdd">
+                <label for="Land">Land:</label>
+                <input type="number" id="landI2" value="0"><br>
+                <label for="Inventory">Inventory:</label>
+                <input type="number" id="invI2" value="0"><br>
+                <label for="Supplies">Supplies:</label>
+                <input type="number" id="suppI2" value="0"><br>
+                <label for="Temporary Investments">Temporary Investments:</label>
+                <input type="number" id="tempI2" value="0"><br>
+            <p>Total Investment Property and Equipment: &#x24;<span id="tiProp"></span></p>
+            </div>
+            
+            <div id="int">
+                <button type="button" onclick="showInt()">Add Intangibles</button>
+                </div>
+                <div id = "intAdd" div class="intAdd">
+                    <label for="Trade Names">Trade Names:</label>
+                    <input type="number" id="tradeI" value="0"><br>
+                    <label for="Goodwill">Inventory:</label>
+                    <input type="number" id="invI3" value="0"><br>
+                    <p>Total Intangibles: &#x24;<span id="tInt"></span></p>
+            </div>
+
+
+
+            <div id = "lTitle1">
+                <h3>Current Liabilities</h3>
+            </div>
+            <div id = "lTitle2">
+                <h3>Long-Term Liabilities</h3>
+            </div>
+           
+
+            <div id="cLiab">
+                <button type="button" onclick="showcLiab()">Add Current Liabilities</button>
+            </div>
+            <div id = "liabAdd" div class="liabAdd">
+                <label for="Accounts Payable">Accounts Payable:</label>
+                <input type="number" id="accPay" value="0"><br>
+                <label for="Notes Payable">Notes Payable:</label>
+                <input type="number" id="notePay" value = "0"><br>
+                <label for="Interest Payable">Interest Payable:</label>
+                <input type="number" id="intPay" value="0"><br>
+                <label for="Wages Payable">Wages Payable:</label>
+                <input type="number" id="wagePay" value="0"><br>
+                <label for="Accrued Expenses">Accrued Expenses:</label>
+                <input type="number" id="accExp" value="0"><br>
+            <p>Total Current Liabilities: &#x24;<span id="tcLiab"></span></p>
+        </div>
+
+
+            <div id="ltLiab">
+                <button type="button" onclick="showltLiab()">Add Long-term Liabilities</button>
+            </div>
+            <div id = "ltLiabAdd" div class="ltLiabAdd">
+                <label for="Notes Payable">Notes Payable:</label>
+                <input type="number" id="notePay2" value="0"><br>
+                <label for="Bonds Payable">Bonds Payable:</label>
+                <input type="number" id="bondPay" value="0"><br>
+            <p>Total Long-Term Liabilties: &#x24;<span id="longTerm"></span></p>
+        </div>
+        <div id = "lTitle3">
+            <h3>Total Postition</h3>
+            <button type="submit" onclick="addAll()">Calculate Position</button>
+            <p>
+                Total Assets: &#x24; <span id="tAssets"></span><br>
+                Total Liabilities: &#x24;<span id = "tLiabilities"></span><br>
+                Position: &#x24;<span id="position"></span><br>
+            </p>
+        </div>
+
+               
+            
+        </div>
+
+ 
+
+    <footer>
+        <footer class="footerWrapper">
+            <h2>&#169; Bellarmine University 2022</h2>
+        </footer>
+    
+</body>
+</html>
